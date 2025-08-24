@@ -1,36 +1,85 @@
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { Menu, X } from 'lucide-react';
 
+const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-const navItems = ["Home", "About", "Skills", "Projects", "Contact"]
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
+  const navItems = [
+    { href: '#about', label: 'About' },
+    { href: '#skills', label: 'Skills' },
+    { href: '#projects', label: 'Projects' },
+    { href: '#contact', label: 'Contact' }
+  ];
 
-
-const Navbar = () => {
-
+  const scrollToSection = (href) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMobileMenuOpen(false);
+  };
 
   return (
-    <div className='font-circular-web fixed text-white rounded-lg inset-x-0 top-4 z-50 h-16
-    border-none transition-all duration-700 sm:inset-x-6'>
-      <header className='absolute top-0 w-full -translate-1/2'>
-      <nav className='flex size-full items-center justify-between p-4'>
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? 'bg-background/95 backdrop-blur-md border-b border-border/50 shadow-sm'
+          : 'bg-transparent'
+      }`}
+    >
+      <div className="max-w-6xl mx-auto px-4 md:px-8">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <div className="font-bold text-xl text-primary">Gladis</div>
 
-        <div className='flex items-center gap-7'>
-            <p>KANKWALA</p>
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex space-x-8">
+            {navItems.map((item) => (
+              <button
+                key={item.href}
+                onClick={() => scrollToSection(item.href)}
+                className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium"
+              >
+                {item.label}
+              </button>
+            ))}
+          </nav>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden p-2 text-muted-foreground hover:text-primary transition-colors"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
 
-        <div className='flex h-full items-center md-hidden'>
-          <div className='hidden md:flex gap-4'>
-            {navItems.map((item)=>(
-              <a key={item} href={`#${item.toLowerCase()}`}>
-                {item}
-              </a>
+        {/* Mobile Navigation */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden border-t border-border/50 mt-2 py-4 space-y-4 animate-fade-in">
+            {navItems.map((item) => (
+              <button
+                key={item.href}
+                onClick={() => scrollToSection(item.href)}
+                className="block w-full text-left py-2 text-black hover:text-primary transition-colors duration-200"
+              >
+                {item.label}
+              </button>
             ))}
           </div>
-        </div>
-      </nav>
-      </header>
-    </div>
+        )}
+      </div>
+    </header>
   );
 };
 
-export default Navbar
+export default Header;
