@@ -42,7 +42,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex flex-col justify-center items-center text-center bg-white px-6"
+      className="min-h-screen flex flex-col justify-center items-center text-center bg-black text-white px-6"
     >
       {/* Titre principal */}
       <h1 id="head-hero" className="text-6xl md:text-8xl font-extrabold text-gray-900 mb-6">
