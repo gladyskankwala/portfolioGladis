@@ -1,5 +1,5 @@
 // src/components/Contact.jsx
-import { Mail, Github, Linkedin, Download } from 'lucide-react';
+import { Mail, Github, Linkedin, Download,  } from 'lucide-react';
 import { useState } from 'react';
 
 const Contact = () => {
@@ -88,6 +88,14 @@ const Contact = () => {
               LinkedIn
             </a>
           </div>
+
+          <div className="flex items-center space-x-3 justify-center">
+            <Download className="h-6 w-6 text-red-700" />
+            <a href="#" download className="text-gray-700 hover:text-red-700 transition">
+              Download CV
+            </a>
+          </div>
+          
           <div className="flex items-center space-x-3 justify-center">
             <Download className="h-6 w-6 text-red-700" />
             <a href="#" download className="text-gray-700 hover:text-red-700 transition">

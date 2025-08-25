@@ -1,20 +1,55 @@
 import { Code, Shield, Rocket, Heart } from "lucide-react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger, SplitText } from "gsap/all";
+
+gsap.registerPlugin(ScrollTrigger, SplitText)
 
 const About = () => {
+  useGSAP(()=>{
+
+    const titleSplit = new SplitText ("#about-div h2", {type: 'words'})
+
+
+    const paragraphSplit = new SplitText("#para p", {type: 'lines'})
+
+    const scrollTimeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: '#about',
+        start: 'top center',
+      }
+    })
+
+    scrollTimeline
+     .from(titleSplit.words, {
+      opacity: 0, duration: 1,yPercent: 100, ease: 'expo.out', stagger: 0.02
+     })
+     .from(paragraphSplit.lines,{
+      opacity: 0, duration: 1, yPercent: 100, ease: "expo.inOut", stagger: 0.03
+     })
+     .from("#pattern div", {
+      opacity: 0, duration: 1, yPercent: 50, ease: "expo.inOut", stagger: 0.04
+      });
+
+
+
+  })
+
+
+
   return (
     <section id="about" className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+        <div id="about-div" className="text-center mb-16">
+          <h2 id="title" className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
             About <span className="text-red-800">Me</span>
           </h2>
-          <div className="w-24 h-1 bg-red-800 mx-auto rounded-full" />
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div  className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Texte */}
-          <div className="space-y-6">
-            <p className="text-lg text-gray-600 leading-relaxed">
+          <div id="para" className="space-y-6">
+            <p  className="text-lg text-gray-600 leading-relaxed">
               I'm a passionate junior front-end developer currently pursuing my Bachelor's degree in 
               <span className="text-red-800 font-medium"> Cybersecurity</span>. 
             </p>
@@ -29,7 +64,7 @@ const About = () => {
           </div>
 
           {/* Cartes */}
-          <div className="grid grid-cols-2 gap-6">
+          <div id="pattern" className="grid grid-cols-2 gap-6">
             <div className="text-center p-6 border rounded-lg bg-red-50">
               <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <Code className="h-6 w-6 text-red-800" />
