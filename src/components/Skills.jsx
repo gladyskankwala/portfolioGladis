@@ -8,12 +8,12 @@ gsap.registerPlugin(ScrollTrigger, SplitText)
 
 const Skills = () => {
   const skills = [
-    { name: "HTML5", icon: Code2, level: 90 },
-    { name: "CSS3", icon: Palette, level: 85 },
-    { name: "JavaScript", icon: Zap, level: 80 },
-    { name: "React", icon: Globe, level: 75 },
-    { name: "Git & GitHub", icon: GitBranch, level: 85 },
-    { name: "Responsive Design", icon: Smartphone, level: 90 },
+    { name: "HTML5", icon: Code2, level: 83 },
+    { name: "CSS3", icon: Palette, level: 75 },
+    { name: "JavaScript", icon: Zap, level: 65 },
+    { name: "React", icon: Globe, level: 72 },
+    { name: "Git & GitHub", icon: GitBranch, level: 71 },
+    { name: "Responsive Design", icon: Smartphone, level: 70 },
     //{ name: "Web Security", icon: Shield, level: 70 },
     //{ name: "HTTPS/SSL", icon: Database, level: 75 },
   ];
@@ -28,7 +28,8 @@ const Skills = () => {
     const scrollTimeline = gsap.timeline({
       scrollTrigger: {
         trigger: "#skills",
-        start: 'top center'
+        start: 'top center',
+        once: true
       }
     })
 
@@ -48,7 +49,7 @@ const Skills = () => {
 
   return (
     <section id="skills" className="min-h-screen bg-white px-6 py-16 text-center">
-      <h2 className="text-4xl md:text-5xl font-bold text-red-800 mb-8">
+      <h2 className="text-4xl md:text-5xl font-bold text-red-600 mb-8">
         Skills & Expertise
       </h2>
       <p id='para-skills' className="text-gray-700 mb-12 max-w-2xl mx-auto">
@@ -61,12 +62,12 @@ const Skills = () => {
            return(
             <div  key={skill.name} className="bg-gray-50 rounded-xl p-6 flex flex-col items-center text-center shadow-md hover:shadow-lg transition">
               <div className="p-4 bg-red-100 rounded-full mb-4">
-                <Icon className="h-6 w-6 text-red-700" />
+                <Icon className="h-6 w-6 text-red-600" />
               </div>
               <h3 className="font-semibold text-red-800 mb-2">{skill.name}</h3>
               <div className="w-full bg-gray-200 rounded-full h-2">
                 <div 
-                  className="h-2 rounded-full bg-red-700"
+                  className="h-2 rounded-full bg-red-600"
                   style={{ width: `${skill.level}%` }}
                 />
               </div>

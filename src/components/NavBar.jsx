@@ -20,11 +20,11 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/70 backdrop-blur-md border-b border-border/50 shadow-sm">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/70 backdrop-blur-md  shadow-sm">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
-        <div className="flex items-center justify-between h-12">
+        <div className="flex items-center justify-between text-slate-400  h-10 sm:h-12 md:h-16 lg:h-20">
           {/* Logo */}
-          <div className="font-bold text-xl text-primary">Gladis</div>
+          <div className="font-bold  text-xl text-primary">Gladis</div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">

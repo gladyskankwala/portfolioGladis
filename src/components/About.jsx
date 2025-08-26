@@ -17,6 +17,7 @@ const About = () => {
       scrollTrigger: {
         trigger: '#about',
         start: 'top center',
+        once: true
       }
     })
 
@@ -42,7 +43,7 @@ const About = () => {
       <div className="max-w-6xl mx-auto px-6">
         <div id="about-div" className="text-center mb-16">
           <h2 id="title" className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-            About <span className="text-red-800">Me</span>
+            About <span className="text-red-600">Me</span>
           </h2>
         </div>
 
@@ -51,7 +52,7 @@ const About = () => {
           <div id="para" className="space-y-6">
             <p  className="text-lg text-gray-600 leading-relaxed">
               I'm a passionate junior front-end developer currently pursuing my Bachelor's degree in 
-              <span className="text-red-800 font-medium"> Cybersecurity</span>. 
+              <span className="text-red-600 font-medium"> Cybersecurity</span>. 
             </p>
             <p className="text-lg text-gray-600 leading-relaxed">
               My journey into web development started with curiosity about how websites work, which evolved 
@@ -67,7 +68,7 @@ const About = () => {
           <div id="pattern" className="grid grid-cols-2 gap-6">
             <div className="text-center p-6 border rounded-lg bg-red-50">
               <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <Code className="h-6 w-6 text-red-800" />
+                <Code className="h-6 w-6 text-red-600" />
               </div>
               <h3 className="font-semibold text-gray-800 mb-2">Clean Code</h3>
               <p className="text-sm text-gray-600">
@@ -77,7 +78,7 @@ const About = () => {
 
             {/*<div className="text-center p-6 border rounded-lg bg-red-50">
               <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <Shield className="h-6 w-6 text-red-800" />
+                <Shield className="h-6 w-6 text-red-600" />
               </div>
               <h3 className="font-semibold text-gray-800 mb-2">Security First</h3>
               <p className="text-sm text-gray-600">
@@ -87,7 +88,7 @@ const About = () => {
 
             <div className="text-center p-6 border rounded-lg bg-red-50">
               <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <Rocket className="h-6 w-6 text-red-800" />
+                <Rocket className="h-6 w-6 text-red-600" />
               </div>
               <h3 className="font-semibold text-gray-800 mb-2">Fast Learning</h3>
               <p className="text-sm text-gray-600">
@@ -97,7 +98,7 @@ const About = () => {
 
             <div className="text-center p-6 border rounded-lg bg-red-50">
               <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <Heart className="h-6 w-6 text-red-800" />
+                <Heart className="h-6 w-6 text-red-600" />
               </div>
               <h3 className="font-semibold text-gray-800 mb-2">User Focus</h3>
               <p className="text-sm text-gray-600">

@@ -22,7 +22,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className="min-h-screen bg-white px-6 py-16 text-center">
-      <h2 className="text-4xl md:text-5xl font-bold text-red-800 mb-6">
+      <h2 className="text-4xl md:text-5xl font-bold text-red-600 mb-6">
         Get In Touch
       </h2>
       <p className="text-gray-700 mb-12 max-w-2xl mx-auto">
@@ -62,7 +62,7 @@ const Contact = () => {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="px-6 py-3 bg-red-700 text-white font-semibold rounded-lg hover:bg-red-800 transition"
+            className="px-6 py-3 bg-red-500 text-white font-semibold rounded-lg hover:bg-red-600 transition"
           >
             {isSubmitting ? "Sending..." : "Send Message"}
           </button>
@@ -71,34 +71,27 @@ const Contact = () => {
         {/* Contact Info & Social */}
         <div className="flex flex-col space-y-6 justify-center">
           <div className="flex items-center space-x-3 justify-center">
-            <Mail className="h-6 w-6 text-red-700" />
-            <a href="mailto:alex.chen@email.com" className="text-gray-700 hover:text-red-700 transition">
+            <Mail className="h-6 w-6 text-red-500" />
+            <a href="mailto:alex.chen@email.com" className="text-gray-700 hover:text-red-500 transition">
               gladyskankwala03@email.com
             </a>
           </div>
           <div className="flex items-center space-x-3 justify-center">
-            <Github className="h-6 w-6 text-red-700" />
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-red-700 transition">
+            <Github className="h-6 w-6 text-red-500" />
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-red-500 transition">
               GitHub
             </a>
           </div>
           <div className="flex items-center space-x-3 justify-center">
-            <Linkedin className="h-6 w-6 text-red-700" />
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-red-700 transition">
+            <Linkedin className="h-6 w-6 text-red-500" />
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-red-500 transition">
               LinkedIn
             </a>
           </div>
 
           <div className="flex items-center space-x-3 justify-center">
-            <Download className="h-6 w-6 text-red-700" />
-            <a href="#" download className="text-gray-700 hover:text-red-700 transition">
-              Download CV
-            </a>
-          </div>
-          
-          <div className="flex items-center space-x-3 justify-center">
-            <Download className="h-6 w-6 text-red-700" />
-            <a href="#" download className="text-gray-700 hover:text-red-700 transition">
+            <Download className="h-6 w-6 text-red-500" />
+            <a href="#" download className="text-gray-700 hover:text-red-500 transition">
               Download CV
             </a>
           </div>
