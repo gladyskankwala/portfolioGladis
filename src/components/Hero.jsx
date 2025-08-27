@@ -128,7 +128,7 @@ function Hero() {
                 </div>
             </div>
             <div className="absolute bottom-5 sm:bottom-16 md:bottom-20 lg:bottom-24 
-            left-1/2 transform -translate-x-1/2 animate-bounce">
+            left-1/2 sm:left-1/2 md:left-1/2 lg:left-1/2 transform -translate-x-1/2 animate-bounce">
                 <FaChevronDown className="text-white" size={30} />
             </div>
         </div>

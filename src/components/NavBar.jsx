@@ -50,7 +50,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden border-t border-border/50 mt-2 py-4 space-y-4 animate-fade-in">
+          <div className="md:hidden text-red-600 border-t border-border/50 mt-2 py-4 space-y-4 animate-fade-in">
             {navItems.map((item) => (
               <button
                 key={item.href}
