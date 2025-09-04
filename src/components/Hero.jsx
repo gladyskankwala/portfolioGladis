@@ -60,8 +60,14 @@ function Hero() {
 
     return(
         <div 
-        className="bg-black-100 relative  min-h-[100vh] 
+        className="bg-black-100 relative  min-h-screen w-full bg-[#020617] 
         w-screen items-center  overflow-hidden ">
+            <div 
+               className="absolute inset-0 z-0"
+               style={{
+                backgroundImage: `radial-gradient(circle 500px at 50% 100px, rgba(239, 68, 68, 0.4), transparent)`
+               }}
+            />
             <div className="grid lg:grid-cols-2 mt-8 md-mt-5 p-4 gap-1 min-h-screen place-items-center">
                 <div id="text" className="text-white m-0">
                     <h1 className="font-zentry text-6xl md:text-9xl sm:text-9xl">
@@ -79,7 +85,7 @@ function Hero() {
                         <a href="#projects">View My Work</a>
                     </button>
 
-                    <button className="mt-6 px-4 py-2  bg-black-100 cursor-pointer font-circular-web rounded-lg hover:bg-slate-800 transition">
+                    <button className="mt-6 px-4 py-2  bg-slate-500 cursor-pointer font-circular-web rounded-lg hover:bg-slate-700 transition">
                         <a href="#contact">Contact</a>
                     </button>
                     </div>
@@ -128,7 +134,7 @@ function Hero() {
                 </div>
             </div>
             <div className="absolute bottom-5 sm:bottom-16 md:bottom-20 lg:bottom-24 
-            left-1/2 sm:left-1/2 md:left-1/2 lg:left-1/2 transform -translate-x-1/2 animate-bounce">
+            left-1/2 transform -translate-x-1/2 animate-bounce">
                 <FaChevronDown className="text-white" size={30} />
             </div>
         </div>
