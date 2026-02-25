@@ -60,27 +60,28 @@ function Hero() {
 
     return(
         <div 
-        className="bg-black-100 relative  min-h-screen w-full bg-[#020617] 
-        w-screen items-center  overflow-hidden ">
+        className="flex  bg-black-100 relative  min-h-screen w-full 
+          items-center justify-center overflow-hidden ">
             <div 
                className="absolute inset-0 z-0"
                style={{
                 backgroundImage: `radial-gradient(circle 500px at 50% 100px, rgba(239, 68, 68, 0.4), transparent)`
                }}
             />
-            <div className="grid lg:grid-cols-2 mt-8 md-mt-5 p-4 gap-1 min-h-screen place-items-center">
+            <div className="relative z-10 flex flex-col justify-center items-center min-h-screen text-center px-4">
                 <div id="text" className="text-white m-0">
-                    <h1 className="font-zentry text-6xl md:text-9xl sm:text-9xl">
-                    Hello World <br/> i'm <span className="text-red-600">Gladis</span> 
+                      
+                    <h2>Hi! i'm Gladis</h2>
+                    <h1 className="font-zentry text-6xl md:text-6xl sm:text-9xl">
+                    Front end developer<br/> i'm <span className="text-red-600">Gladis</span> 
                     </h1>
-                    <p className="font-circular-web text-2xl">Front end developer</p>
+                    <p className="font-circular-web text-2xl"></p>
 
-                    <p>Passionate about creating secure, user-friendly<br/> web experiences. 
-                       Combining<br/> front-end development skills with cybersecurity<br/> 
+                    <p>front-end development skills with cybersecurity 
                         knowledge to build robust and protected applications.
                     </p>
 
-                    <div  className="btn flex gap-4 -mt-4 mb-4">
+                    <div  className="btn flex gap-4 -mt-4 mb-4 justify-center">
                     <button className="mt-6 px-4 py-2 bg-red-600 cursor-pointer font-circular-web rounded-lg hover:bg-red-700 transition">
                         <a href="#projects">View My Work</a>
                     </button>
@@ -93,7 +94,7 @@ function Hero() {
                    
                 </div>
 
-                <div id="terminal" className="flex flex-col shadow-lg ring-2 ring-red-600/50 shadow-red-500/50 w-64 h-64 md:w-96 md:w-96 text-xs rounded-xl overflow-hidden font-robert-regular">
+                {/*<div id="terminal" className="flex flex-col text-start shadow-lg ring-2 ring-red-600/50 shadow-red-500/50 w-64 h-64 md:w-96 text-xs rounded-xl overflow-hidden font-robert-regular">
                     <div className="flex items-center  justify-between bg-slate-800 p-3 ">
                         <div className="flex gap-2">
                            <div className="w-6 h-6 rounded-xl cursor-pointer bg-red-600"></div>
@@ -131,12 +132,13 @@ function Hero() {
                             </p>
                         </div>
                     </div>
-                </div>
+                </div>*/}
             </div>
             <div className="absolute bottom-5 sm:bottom-16 md:bottom-20 lg:bottom-24 
-            left-1/2 transform -translate-x-1/2 animate-bounce">
-                <FaChevronDown className="text-white" size={30} />
+                left-1/2 transform -translate-x-1/2 animate-bounce">
+                    <FaChevronDown className="text-white" size={30} />
             </div>
+          
         </div>
     )
 }
