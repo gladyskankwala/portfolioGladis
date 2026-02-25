@@ -1,4 +1,4 @@
-//import { Code, Smartphone, Globe , Heart } from "lucide-react";
+import { Code2, Smartphone, Globe , Palette, Zap, GitBranch} from "lucide-react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger, SplitText } from "gsap/all";
@@ -6,15 +6,16 @@ import { ScrollTrigger, SplitText } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger, SplitText)
 
 const skills = [
-    { name: "HTML5", /*icon: Code,*/ level: 83 },
-    { name: "CSS3", level: 75 },
-    { name: "JavaScript" ,level: 65 },
-    { name: "React", level: 72 },
-    { name: "Git & GitHub", level: 71 },
-    { name: "Responsive Design", level: 70 },
+    { name: "HTML5", icon: Code2},
+    { name: "CSS3", icon: Palette},
+    { name: "JavaScript", icon: Zap},
+    { name: "React", icon: Globe},
+    { name: "Git & GitHub", icon: GitBranch},
+    { name: "Responsive Design", icon: Smartphone},
     //{ name: "Web Security", icon: Shield, level: 70 },
     //{ name: "HTTPS/SSL", icon: Database, level: 75 },
   ];
+
 
 const About = () => {
 
@@ -122,12 +123,15 @@ const About = () => {
               projects while continuing to grow as a developer.
             </p>
             <div className="flex flex-wrap gap-4">
-              {skills.map((skill) => (
-                <div key={skill.name} className="p-4 border-solid border-black-100 bg-white">
+              {skills.map((skill) => {
+                const Icon = skill.icon
+                return(
+                <div key={skill.name} className=" bg-black-100 border-solid border-red-500/50  flex flex-col justify-center items-center w-20 h-20 text-center text-white">
+                  <Icon size={20}/>
                   <h3>{skill.name}</h3>
-
+                  <p>{skill.level}</p>
                 </div>
-              ))}
+              )})}
             </div>
           </div>
         </div>
