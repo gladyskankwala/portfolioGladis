@@ -31,21 +31,27 @@ const About = () => {
     const scrollTimeline = gsap.timeline({
       scrollTrigger: {
         trigger: '#about',
-        start: 'top center',
+        start: 'top 70%',
         once: true
       }
     })
 
     scrollTimeline
      .from(titleSplit.words, {
-      opacity: 0, duration: 1,yPercent: 100, ease: 'expo.out', stagger: 0.02
+      opacity: 0, duration: 1,yPercent: 100, ease: 'expo.out', stagger: 0.05
      })
      .from(paragraphSplit.lines,{
-      opacity: 0, duration: 1, yPercent: 100, ease: "expo.inOut", stagger: 0.03
+      opacity: 0, duration: 1, yPercent: 100, ease: "expo.inOut", stagger: 0.1
      })
      .from("#pattern div", {
-      opacity: 0, duration: 1, yPercent: 50, ease: "expo.inOut", stagger: 0.04
+      opacity: 0, duration: 1, yPercent: 50, ease: "expo.inOut", stagger: 0.1
       });
+
+
+    return() => {
+      titleSplit.revert();
+      paragraphSplit.revert();
+    }
 
 
 
@@ -62,10 +68,10 @@ const About = () => {
           </h2>
         </div>
 
-        <div  className="grid lg:grid-cols-2 gap-12 items-center">
+        <div  className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
 
-          <div id="terminal" className="flex flex-col text-start shadow-lg ring-2 ring-red-600/50 shadow-red-500/50 w-64 h-64 md:w-96 text-xs rounded-xl overflow-hidden font-robert-regular">
+          <div id="terminal" className="flex flex-col text-start shadow-lg ring-2 ring-red-600/50 shadow-red-500/50 w-full max-w-sm md:max-w-md h-72 md:h-96 text-xs rounded-xl overflow-hidden font-robert-regular">
             <div className="flex items-center  justify-between bg-slate-800 p-3 ">
               <div className="flex gap-2">
                 <div className="w-6 h-6 rounded-xl cursor-pointer bg-red-600"></div>
@@ -115,10 +121,6 @@ const About = () => {
               <span className="text-red-600 font-medium"> Cybersecurity</span>. 
             </p>
             <p className="text-lg text-white leading-relaxed">
-              My journey into technology started with curiosity about how software and network work, 
-              which evolved into a deep appreciation for clean code, robust security practices.
-            </p>
-            <p className="text-lg text-white leading-relaxed">
               I'm actively seeking my first professional opportunity where I can contribute to meaningful 
               projects while continuing to grow as a developer.
             </p>
@@ -126,7 +128,16 @@ const About = () => {
               {skills.map((skill) => {
                 const Icon = skill.icon
                 return(
-                <div key={skill.name} className=" bg-black-100 border-solid border-red-500/50  flex flex-col justify-center items-center w-20 h-20 text-center text-white">
+                <div key={skill.name} className="
+                    bg-black-100 backdrop-blur-md
+                    border border-red-600
+                    rounded-xl
+                    flex flex-col justify-center items-center
+                    w-24 h-24 md:w-28 md:h-28
+                    text-slate-400
+                    transition-all duration-300
+                    hover:border-red-500/60
+                    hover:shadow-lg hover:shadow-red-500/50">
                   <Icon size={20}/>
                   <h3>{skill.name}</h3>
                   <p>{skill.level}</p>

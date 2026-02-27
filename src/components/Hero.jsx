@@ -54,6 +54,11 @@ function Hero() {
             stagger: 0.05,
             delay: 1.5
         })
+
+        return () => {
+            heroSplit.revert();
+            paragraphSplit.revert()
+        }
     })
 
 

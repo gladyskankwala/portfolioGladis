@@ -79,6 +79,8 @@ const Projects = () => {
         Featured Projects
       </h2>
       <p className="text-gray-700 mb-12 max-w-2xl mx-auto">
+        My journey into technology started with curiosity about how software and network work, 
+        which evolved into a deep appreciation for clean code, robust security practices.
         Some of my recent projects showcasing front-end development skills and cybersecurity knowledge.
       </p>
 
