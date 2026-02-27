@@ -2,16 +2,10 @@ import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
 import SplitText from "gsap/SplitText"
 import { FaChevronDown } from "react-icons/fa"
-import { Download } from "lucide-react"
 
 gsap.registerPlugin(SplitText)
 
 
-const text = [
-    'Front-end developer',
-    'cybersecurity Student',
-    'Machine Learning Enthusiast'
-]
 
 function Hero() {
 
@@ -78,8 +72,8 @@ function Hero() {
                 <div id="text" className="text-white m-0">
                       
                     <h2>Hi! i'm Gladis</h2>
-                    <h1 className="font-zentry text-6xl md:text-6xl sm:text-9xl">
-                    Front end developer<br/> i'm <span className="text-red-600">Gladis</span> 
+                    <h1 className="font-zentry text-6xl md:text-10xl sm:text-9xl">
+                    Frontend developer 
                     </h1>
                     <p className="font-circular-web text-2xl"></p>
 

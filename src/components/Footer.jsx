@@ -26,7 +26,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom section */}
-        <div className="mt-6 pt-6 border-t border-gray-200 text-center">
+        <div className="flex justify-center gap-10 py-2 border-t border-gray-200 text-center">
            <div className="flex items-center space-x-3 justify-center">
             <Github className="h-6 w-6 text-red-500" />
             <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-red-500 transition">

@@ -83,7 +83,7 @@ const About = () => {
               </div>
             </div>
 
-            <div className="flex flex-col bg-black-100 w-full h-full p-10 justify-between">
+            <div className="flex flex-col bg-black-100 text-xs w-full h-full p-8 justify-between">
               <div>
                 <h2 className="text-slate-200"> 
                 <span className="text-green-600 m-2">$</span>
