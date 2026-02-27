@@ -59,7 +59,7 @@ const Header = () => {
         </div>
 
         {/* Mobile Navigation */}
-        <div className={`md:hidden text-red-600 border-t border-border/50 mt-2 py-1 space-y-4 animate-fade-in overflow-hidden transition-all duration-300 ease-in-out 
+        <div className={`md:hidden text-white border-t border-border/50 mt-2 py-1 space-y-4 animate-fade-in overflow-hidden transition-all duration-300 ease-in-out 
           ${isMobileMenuOpen ? " opacity-100 mt-2" : "max-h-0 opacity-0"}`}>
             {navItems.map((item) => (
               <button

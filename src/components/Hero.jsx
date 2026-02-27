@@ -2,6 +2,7 @@ import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
 import SplitText from "gsap/SplitText"
 import { FaChevronDown } from "react-icons/fa"
+import { Download } from "lucide-react"
 
 gsap.registerPlugin(SplitText)
 
@@ -88,11 +89,11 @@ function Hero() {
 
                     <div  className="btn flex gap-4 -mt-4 mb-4 justify-center">
                     <button className="mt-6 px-4 py-2 bg-red-600 cursor-pointer font-circular-web rounded-lg hover:bg-red-700 transition">
-                        <a href="#projects">View My Work</a>
+                        <a href="#contact">Contact me</a>
                     </button>
 
-                    <button className="mt-6 px-4 py-2  bg-slate-500 cursor-pointer font-circular-web rounded-lg hover:bg-slate-700 transition">
-                        <a href="#contact">Contact</a>
+                    <button className=" mt-6 px-4 py-2  bg-slate-500 cursor-pointer font-circular-web rounded-lg hover:bg-slate-700 transition">
+                        <a href="#contact">My resume</a>
                     </button>
                     </div>
                     

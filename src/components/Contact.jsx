@@ -76,25 +76,6 @@ const Contact = () => {
               gladyskankwala03@email.com
             </a>
           </div>
-          <div className="flex items-center space-x-3 justify-center">
-            <Github className="h-6 w-6 text-red-500" />
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-red-500 transition">
-              GitHub
-            </a>
-          </div>
-          <div className="flex items-center space-x-3 justify-center">
-            <Linkedin className="h-6 w-6 text-red-500" />
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-red-500 transition">
-              LinkedIn
-            </a>
-          </div>
-
-          <div className="flex items-center space-x-3 justify-center">
-            <Download className="h-6 w-6 text-red-500" />
-            <a href="#" download className="text-gray-700 hover:text-red-500 transition">
-              Download CV
-            </a>
-          </div>
         </div>
       </div>
     </section>
