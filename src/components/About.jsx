@@ -18,47 +18,6 @@ const skills = [
 
 
 const About = () => {
-
-  
-
-  useGSAP(()=>{
-
-    const titleSplit = new SplitText ("#about-div h2", {type: 'words'})
-
-
-    const paragraphSplit = new SplitText("#para p", {type: 'lines'})
-
-    const scrollTimeline = gsap.timeline({
-      scrollTrigger: {
-        trigger: '#about',
-        start: 'top 70%',
-        once: true
-      }
-    })
-
-    scrollTimeline
-     .from(titleSplit.words, {
-      opacity: 0, duration: 1,yPercent: 100, ease: 'expo.out', stagger: 0.05
-     })
-     .from(paragraphSplit.lines,{
-      opacity: 0, duration: 1, yPercent: 100, ease: "expo.inOut", stagger: 0.1
-     })
-     .from("#pattern div", {
-      opacity: 0, duration: 1, yPercent: 50, ease: "expo.inOut", stagger: 0.1
-      });
-
-
-    return() => {
-      titleSplit.revert();
-      paragraphSplit.revert();
-    }
-
-
-
-  })
-
-
-
   return (
     <section id="aboutme" className=" py-20 bg-black-100 min-h-screen">
       <div className="max-w-6xl mx-auto px-6">
@@ -130,6 +89,7 @@ const About = () => {
                 return(
                 <div key={skill.name} className="
                     bg-black-100 backdrop-blur-md
+                    text-center
                     border border-red-600
                     rounded-xl
                     flex flex-col justify-center items-center
