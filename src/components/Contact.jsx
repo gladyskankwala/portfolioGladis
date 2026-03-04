@@ -29,7 +29,7 @@ const Contact = () => {
         Feel free to reach out via email or through my social profiles. I'm always open to new projects and opportunities.
       </p>
 
-      <div className="max-w-3xl mx-auto grid md:grid-cols-2 gap-12">
+      <div className="max-w-3xl mx-auto flex flex-col gap-12">
         {/* Contact Form */}
         <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
           <input

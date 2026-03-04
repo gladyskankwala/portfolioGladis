@@ -19,15 +19,17 @@ function ScrollTriger () {
                     start: "bottom bottom",
                     end: "center center",
                     scrub: true,
-                    markers: true
                 }
             })
         })
     }, {scope: main})
 
     return(
-        <div className="box-container gap-4 space-y-40 flex justify-center items-center h-screen w-screen flex-col" ref={main}>
-          <div className="box bg-blue-500 h-screen w-screen">Box 1</div>
+        <div className="box-container bg-black-100 gap-4 space-y-40 flex justify-center items-center h-screen w-screen flex-col" ref={main}>
+          <div className="box bg-white h-screen w-screen flex justify-center items-center">
+            <h1 className="text-4xl md:text-5xl font-bold text-red-600 mb-6">Projects</h1>
+            <p>comming soon</p>
+          </div>
         </div>
     )
 }

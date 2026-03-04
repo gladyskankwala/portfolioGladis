@@ -18,6 +18,47 @@ const skills = [
 
 
 const About = () => {
+
+  
+
+  useGSAP(()=>{
+
+    const titleSplit = new SplitText ("#about-div h2", {type: 'words'})
+
+
+    const paragraphSplit = new SplitText("#para p", {type: 'lines'})
+
+    const scrollTimeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: '#about',
+        start: 'top 70%',
+        once: true
+      }
+    })
+
+    scrollTimeline
+     .from(titleSplit.words, {
+      opacity: 0, duration: 1,yPercent: 100, ease: 'expo.out', stagger: 0.05
+     })
+     .from(paragraphSplit.lines,{
+      opacity: 0, duration: 1, yPercent: 100, ease: "expo.inOut", stagger: 0.1
+     })
+     .from("#pattern div", {
+      opacity: 0, duration: 1, yPercent: 50, ease: "expo.inOut", stagger: 0.1
+      });
+
+
+    return() => {
+      titleSplit.revert();
+      paragraphSplit.revert();
+    }
+
+
+
+  })
+
+
+
   return (
     <section id="aboutme" className=" py-20 bg-black-100 min-h-screen">
       <div className="max-w-6xl mx-auto px-6">
@@ -27,7 +68,7 @@ const About = () => {
           </h2>
         </div>
 
-        <div  className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div  className="grid grid-cols-1 lg:grid-cols-3 gap-16 items-center">
 
 
           <div id="terminal" className="flex flex-col text-start shadow-lg ring-2 ring-red-600/50 shadow-red-500/50 w-full max-w-sm md:max-w-md h-72 md:h-96 text-xs rounded-xl overflow-hidden font-robert-regular">

@@ -41,15 +41,6 @@ function Hero() {
             delay: 1.2
         })
 
-        gsap.from('#terminal', {
-            opacity: 0,
-            yPercent: 100,
-            duration: 1,
-            ease: 'power1.inOut',
-            stagger: 0.05,
-            delay: 1.5
-        })
-
         return () => {
             heroSplit.revert();
             paragraphSplit.revert()
