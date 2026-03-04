@@ -25,8 +25,8 @@ function ScrollTriger () {
     }, {scope: main})
 
     return(
-        <div className="box-container bg-black-100 gap-4 space-y-40 flex justify-center items-center h-screen w-screen flex-col" ref={main}>
-          <div className="box bg-white h-screen w-screen flex justify-center items-center">
+        <div className="box-container bg-black-100 gap-4 space-y-40 flex h-screen w-screen flex-col" ref={main}>
+          <div className="box bg-white h-screen w-screen flex flex-col justify-center items-center">
             <h1 className="text-4xl md:text-5xl font-bold text-red-600 mb-6">Projects</h1>
             <p>comming soon</p>
           </div>
