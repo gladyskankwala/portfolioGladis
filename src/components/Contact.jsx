@@ -21,7 +21,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="min-h-screen bg-white px-6 py-16 text-center">
+    <section id="contactme" className="min-h-screen bg-white px-6 py-16 text-center">
       <h2 className="text-4xl md:text-5xl font-bold text-red-600 mb-6">
         Get In Touch
       </h2>

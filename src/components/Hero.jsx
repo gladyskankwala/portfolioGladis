@@ -50,7 +50,7 @@ function Hero() {
 
 
     return(
-        <div 
+        <div id="home"
         className="flex  bg-black-100 relative  min-h-screen w-full 
           items-center justify-center overflow-hidden ">
             <div 

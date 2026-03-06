@@ -17,13 +17,20 @@ const Header = () => {
     { href: '#aboutme', label: 'About me' },
     { href: '#services', label: 'Services' },
     { href: '#mywork', label: 'My Work' },
-    { href: 'contactme', label: "Contact me"}
+    { href: '#contactme', label: "Contact me"}
   ];
 
   const scrollToSection = (href) => {
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+
+      const offset = 80
+      const top = element.offsetTop - offset
+
+      window.scrollTo({
+        top,
+        behavior: "smooth"
+      })
     }
     setIsMobileMenuOpen(false);
   };
