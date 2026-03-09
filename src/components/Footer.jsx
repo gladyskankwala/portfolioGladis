@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
           {/* Left side - Name and tagline */}
           <div className="text-center md:text-left">
-            <div className="font-bold text-xl text-red-500 mb-1">
+            <div className="font-bold text-sm text-red-500 mb-1">
               Gladis Tshishinga Kankwala
             </div>
             <p className="text-slate-400 text-sm">

@@ -68,7 +68,7 @@ const About = () => {
           </h2>
         </div>
 
-        <div  className="grid grid-cols-1 lg:grid-cols-3 gap-16 items-center">
+        <div  className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
 
           <div id="terminal" className="flex flex-col text-start shadow-lg ring-2 ring-red-600/50 shadow-red-500/50 w-full max-w-sm md:max-w-md h-72 md:h-96 text-xs rounded-xl overflow-hidden font-robert-regular">
