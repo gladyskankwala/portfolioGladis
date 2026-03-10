@@ -1,7 +1,8 @@
-
+import { Code2Icon, icons } from "lucide-react";
 
 const offers = [
     {
+       icon: Code2Icon,
        name: "Development",
        id: 1,
        para: "Bring designs to life with clean, efficient, secure and high-performing code.",
@@ -13,7 +14,7 @@ const offers = [
 function Whatioffer() {
 
     return(
-        <section className="bg-black flex  min-h-screen justify-center gap-10 align-center">
+        <section className="bg-white flex  min-h-screen justify-center gap-10 align-center">
             <div className="flex flex-col justify-center items-center">
                 <div>
                     <h1 className="text-4xl mb-20 md:text-5xl font-bold text-red-600">
@@ -22,8 +23,9 @@ function Whatioffer() {
                 </div>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 justify-center ">
                     {offers.map((offer) => (
-                        <div key={offer.id} className="border bg-slate-500 text-white w-96 p-4 flex flex-col gap-7">
-                            <div className="flex flex-col gap-3">
+                        <div key={offer.id} className="border bg-slate-800 rounded-xl text-white w-96 p-4 flex flex-col gap-5">
+                            <Code2Icon size={24}/>
+                            <div className="flex flex-col gap-3 ">
                                <h2 className=" text-2xl font-bold">{offer.name}</h2>
                                <h3 className="">{offer.para}</h3>
                             </div>
@@ -32,7 +34,7 @@ function Whatioffer() {
                                 <h4 >{offer.comp}</h4>
                             </div>
 
-                             <button>schedule a consulation</button>
+                             <button className="bg-red-600 p-2 rounded-md">schedule a consultation</button>
                        </div>
                     ))}
                 </div>
