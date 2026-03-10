@@ -13,12 +13,20 @@ const offers = [
 function Whatioffer() {
 
     return(
-        <section className="bg-white flex min-h-screen justify-center">
-            <h1>What I offer</h1>
+        <section className="bg-white flex  min-h-screen justify-center gap-4">
             <div>
+                <div>
+                    <h1 className="text-4xl md:text-5xl font-bold text-red-600 mb-4">
+                        What I offer
+                    </h1>
+                </div>
                 {offers.map((offer) => (
-                    <div key={offer.id}>
-                        <h2>{}</h2>
+                    <div key={offer.id} className="border p-4">
+                        <h2>{offer.name}</h2>
+                        <h3>{offer.para}</h3>
+                        <div>
+                            <h3></h3>
+                        </div>
                     </div>
                 ))}
             </div>
