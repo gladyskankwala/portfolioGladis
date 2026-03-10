@@ -3,8 +3,8 @@ import Hero from "./components/Hero"
 import Footer from "./components/Footer"
 import About from "./components/About"
 import Contact from "./components/Contact"
-import Skills from "./components/Skills"
 import Projects from "./components/Projects"
+import Whatioffer from "./components/Whatioffer"
 
 
 function App() {
@@ -15,6 +15,7 @@ function App() {
       <Hero/>
       <About/>
       <Projects/>
+      <Whatioffer/>
       <Contact/>
       <Footer/>
     </>
